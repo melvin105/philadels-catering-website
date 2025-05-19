@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/styles.css" />
+
+    <title>About Us - Philadel's Catering and Deco</title>
+</head>
+
+<body class="bg-gray-50">
+    <main>
+        <!---------------- Header ----------------------->
+        <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50">
+            <nav class="container flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="text-xl sm:text-3xl font-bold text-white">
+                    Philadel's Catering and Deco
+                </div>
+                <!-- Navigation Menu -->
+                <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-indigo-400 backdrop-blur-sm flex flex-col items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:flex">
+                    <ul class="flex flex-col items-center gap-8 lg:flex-row text-white font-semibold text-lg lg:text-xl">
+                        <li><a href="../public/index.html" class="nav-link hover:text-indigo-300">Home</a></li>
+                        <li><a href="../public/about.html" class="nav-link hover:text-indigo-300">About</a></li>
+                        <li><a href="../public/gallery.html" class="nav-link hover:text-indigo-300">Gallery</a></li>
+                        <li><a href="../public/contact_us.html" class="nav-link hover:text-indigo-300">Contact Us</a></li>
+                    </ul>
+                    <!-- Social Icons and Footer Links (Small Screens Only) -->
+                    <div class="flex flex-col items-center mt-8 text-white lg:hidden">
+                        <!-- Social Icons -->
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#" class="text-white"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-instagram-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-twitter-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                        <!-- Additional Links -->
+                        <div class="mt-4 text-center">
+                            <a href="../public/gallery.html" class="mr-4 hover:text-indigo-300">GALLERY</a> |
+                            <a href="../public/faq.html" class="ml-4 hover:text-indigo-300">FAQ</a>
+                        </div>
+                        <p class="mt-4">© 2023 Philadel's Catering and Deco. All rights reserved.</p>
+                        <p class="mt-2">
+                            <a href="../public/ada.html" class="text-green-300">ADA Accessibility Policy</a> ·
+                            <a href="../public/privacy.html" class="text-green-300">Privacy Policy</a>
+                        </p>
+                        <p class="mt-2">
+                            Site & Design By
+                            <a href="#" class="text-green-300 underline">Dooley Creative Co.</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="text-2xl sm:text-4xl cursor-pointer z-50 lg:hidden text-white">
+                    <i class="ri-menu-line" id="hamburger"></i>
+                </div>
+            </nav>
+        </header>
+
+
+
+        
+                 <!------------ hero section --------------------->
+        <section style="background-image: url('../assets/allen-rad.jpg'); backdrop-filter: blur(5px);" class="bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center text-white">
+            <div class="container mx-auto px-8 py-32">
+                <div class="text-center mb-8 " >
+                  <h1 class="text-4xl font-bold text-gray-800">Our Stunning Creations</h1>
+                  <p class="text-gray-700 mt-2 font-extrabold" >Cakes, pastries, decorations, and more to make your celebration unforgettable.</p>
+                </div>
+        </section>
+
+ <!-- Filter Buttons -->
+ <div class="flex justify-center space-x-4 mb-6 py-4">
+    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="filterGallery('all')">All</button>
+    <button class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300" onclick="filterGallery('cakes')">Cakes</button>
+    <button class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300" onclick="filterGallery('pastries')">Pastries</button>
+    <button class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300" onclick="filterGallery('decor')">Decorations</button>
+  </div>
+
+                                            <!-- Gallery Grid -->
+        <section>
+            <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              
+                                 <!-- Gallery Item -->
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/calum-lewis.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+          
+                <div class="gallery-item pastries">
+                <img src="../assets/courtney-cook.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/jeremy-liew.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deva-williamson.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/brigitte-tohm.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/james-coleman.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/alexander-mils.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/brigitte-tohm.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/brooke-lark-V4M.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/brooke-lark.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/brooke-larker.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/cake1.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/calum-lewis.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/courtney-cook.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/deco-unsplash.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deva-williamson.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/jeremy-liew.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/karly-gomez.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jeremy-liew.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+                
+                <div class="gallery-item decor">
+                <img src="../assets/lindsay-cotter-.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/sara-dubler.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/toa-heftiba.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+                        
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+                
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>     
+                
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item cakes">
+                <img src="../assets/deco-unsplash.jpg" alt="Cake" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item pastries">
+                <img src="../assets/jennifer-pallian.jpg" alt="Pastry" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+
+                <div class="gallery-item decor">
+                <img src="../assets/toa-heftiba.jpg" alt="Decor" class="rounded-lg shadow hover:scale-105 transition transform duration-300">
+                </div>
+                                                
+
+            </div>
+        </section>
+
+        </main>  
+
+
+                <!-------------------- Footer -------------------->
+        <footer class="bg-gray-700 text-white py-8">
+            <div class="container mx-auto px-4">
+                <!-- Grid Section -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Logo -->
+                <div class="mb-4 md:mb-0">
+                    <h4 class="text-xl font-semibold">Philadel's Catering</h4>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="font-bold mb-2">Quick Links</h5>
+                    <ul>
+                    <li class="mb-2"><a href="#about" class="hover:underline">About Us</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Our Menu</a></li>
+                    <li class="mb-2"><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+                    <li class="mb-2"><a href="#gallery" class="hover:underline">Gallery</a></li>
+                    <li><a href="#" class="hover:underline">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Follow Us -->
+                <div>
+                    <h5 class="font-bold mb-2">Follow Us</h5>
+                    <ul>
+                    <li class="mb-2"><a href="#" class="hover:underline">Facebook</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Instagram</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Twitter</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">LinkedIn</a></li>
+                    <li><a href="#" class="hover:underline">YouTube</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Stay Updated -->
+                <div>
+                    <h5 class="font-bold mb-2">Stay Updated</h5>
+                    <ul>
+                    <li class="mb-2"><a href="#" class="hover:underline">Newsletter</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Special Offers</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Events</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Catering Services</a></li>
+                    <li><a href="#" class="hover:underline">Feedback</a></li>
+                    </ul>
+                </div>
+                
+                </div>
+            
+                <!-- Subscribe Section -->
+                <div class="mt-8">
+                <h5 class="font-bold mb-2">Subscribe</h5>
+                <form action="#" class="flex flex-col sm:flex-row gap-2">
+                    <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="px-4 py-2 rounded-lg text-gray-800"
+                    />
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                    Subscribe
+                    </button>
+                </form>
+                <p class="text-sm mt-2">
+                    By subscribing, you agree to our <a href="#" class="hover:underline">Privacy Policy</a> and consent to receive updates.
+                </p>
+                </div>
+            </div>
+            
+            <!-- Bottom Links -->
+            <div class="border-t border-indigo-600 mt-8 pt-4">
+                <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 Philadel's Catering. All rights reserved.</p>
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-instagram-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-twitter-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+        </footer>
+                  
+           <script src="../public/main.js"></script>
+           <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>      
+</body>
+</html>     

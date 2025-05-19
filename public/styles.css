@@ -1,0 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Ensure only active slide is visible */
+.review-slide {
+    display: none;
+  }
+  
+  .review-slide.active {
+    display: block;
+  }
+  
+  /* Center the content */
+  .review-slider {
+    position: relative;
+    height: auto;
+  }
+  
+/* nav bar */
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    transition: top 0.3s ease-in-out;  /*Adds a smooth transition when hiding/showing */
+  }

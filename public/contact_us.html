@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/styles.css" />
+
+    <title>About Us - Philadel's Catering and Deco</title>
+</head>
+
+<body class="bg-gray-50">
+    <main>
+        <!---------------- Header ----------------------->
+        <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50">
+            <nav class="container flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="text-xl sm:text-3xl font-bold text-white">
+                    Philadel's Catering and Deco
+                </div>
+                <!-- Navigation Menu -->
+                <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-purple-700 backdrop-blur-sm flex flex-col items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:flex">
+                    <ul class="flex flex-col items-center gap-8 lg:flex-row text-white font-semibold text-lg lg:text-xl">
+                        <li><a href="../public/index.html" class="nav-link hover:text-indigo-300">Home</a></li>
+                        <li><a href="../public/about.html" class="nav-link hover:text-indigo-300">About</a></li>
+                        <li><a href="../public/gallery.html" class="nav-link hover:text-indigo-300">Gallery</a></li>
+                        <li><a href="../public/contact_us.html" class="nav-link hover:text-indigo-300">Contact Us</a></li>
+                    </ul>
+                    <!-- Social Icons and Footer Links (Small Screens Only) -->
+                    <div class="flex flex-col items-center mt-8 text-white lg:hidden">
+                        <!-- Social Icons -->
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#" class="text-white"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-instagram-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-twitter-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                        <!-- Additional Links -->
+                        <div class="mt-4 text-center">
+                            <a href="../public/gallery.html" class="mr-4 hover:text-indigo-300">GALLERY</a> |
+                            <a href="../public/faq.html" class="ml-4 hover:text-indigo-300">FAQ</a>
+                        </div>
+                        <p class="mt-4">© 2023 Philadel's Catering and Deco. All rights reserved.</p>
+                        <p class="mt-2">
+                            <a href="../public/ada.html" class="text-green-300">ADA Accessibility Policy</a> ·
+                            <a href="../public/privacy.html" class="text-green-300">Privacy Policy</a>
+                        </p>
+                        <p class="mt-2">
+                            Site & Design By
+                            <a href="#" class="text-green-300 underline">Dooley Creative Co.</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="text-2xl sm:text-4xl cursor-pointer z-50 lg:hidden text-white">
+                    <i class="ri-menu-line" id="hamburger"></i>
+                </div>
+            </nav>
+        </header>
+
+
+
+                             <!------------- Hero Section ------------->
+        <section class="relative w-full h-64 sm:h-96 bg-cover bg-center" style="background-image: url('../assets/contact-us-1.jpg'); backdrop-filter: blur(5px);">
+            <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for text contrast -->
+            <div class="relative z-10 flex items-center justify-center h-full">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white text-center">Contact Us</h1>
+            </div>
+        </section>
+
+
+                      <!------------ Contact Us Section -------------->
+        <section class="bg-gray-100">
+            <div class="flex flex-col md:flex-row items-center justify-center min-h-screen px-4">
+                <!-- Contact Information -->
+                <div class="w-full md:w-1/2 bg-white shadow-md rounded-lg p-8 m-4">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Contact Us</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="text-purple-600 text-xl mr-3">📞</span>
+                            <p class="text-gray-700">024 218 7608</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-purple-600 text-xl mr-3">📧</span>
+                            <p class="text-gray-700">dubebe2002@yahoo.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-purple-600 text-xl mr-3">📍</span>
+                            <p class="text-gray-700">Apolonia Junction Road <br>
+                              Afienya Jerusalem
+
+                            </p> 
+                              
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="w-full md:w-1/2 bg-white shadow-md rounded-lg p-8 m-4">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Send Us A Message</h2>
+                    <form id="contactForm" class="space-y-4" action="" method="POST">
+                        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4" name="name" placeholder="Name" required />
+                        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-5" name="email" placeholder="Email" required />
+                        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-5" name="phone" placeholder="Phone" />
+
+                        <div>
+                            <p class="text-black mb-2">Preferred method of communication:</p>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6">
+                                    <input type="radio" name="communicationMethod" value="Email" checked class="mr-2" />
+                                    Email
+                                </label>
+
+                                <label class="flex items-center cursor-pointer text-gray-500 text-base font-normal leading-6">
+                                    <input type="radio" name="communicationMethod" value="Phone" class="mr-2" />
+                                    Phone
+                                </label>
+                            </div>
+                        </div>
+
+                        <textarea placeholder="Message" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-500 text-lg font-normal leading-6 focus:ring-purple-500" rows="4" required></textarea>
+
+                        <button type="submit" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500" href="../public/thank_you.html">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+                  
+    </main>
+
+   
+                       <!-------------------- Footer -------------------->
+   <footer class="bg-gray-700 text-white py-8">
+    <div class="container mx-auto px-4">
+      <!-- Grid Section -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Logo -->
+        <div class="mb-4 md:mb-0">
+          <h4 class="text-xl font-semibold">Philadel's Catering</h4>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h5 class="font-bold mb-2">Quick Links</h5>
+          <ul>
+            <li class="mb-2"><a href="#about" class="hover:underline">About Us</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Our Menu</a></li>
+            <li class="mb-2"><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+            <li class="mb-2"><a href="#gallery" class="hover:underline">Gallery</a></li>
+            <li><a href="#" class="hover:underline">Testimonials</a></li>
+          </ul>
+        </div>
+        
+        <!-- Follow Us -->
+        <div>
+          <h5 class="font-bold mb-2">Follow Us</h5>
+          <ul>
+            <li class="mb-2"><a href="#" class="hover:underline">Facebook</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Instagram</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Twitter</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">LinkedIn</a></li>
+            <li><a href="#" class="hover:underline">YouTube</a></li>
+          </ul>
+        </div>
+        
+        <!-- Stay Updated -->
+        <div>
+          <h5 class="font-bold mb-2">Stay Updated</h5>
+          <ul>
+            <li class="mb-2"><a href="#" class="hover:underline">Newsletter</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Special Offers</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Events</a></li>
+            <li class="mb-2"><a href="#" class="hover:underline">Catering Services</a></li>
+            <li><a href="#" class="hover:underline">Feedback</a></li>
+          </ul>
+        </div>
+        
+      </div>
+  
+      <!-- Subscribe Section -->
+      <div class="mt-8">
+        <h5 class="font-bold mb-2">Subscribe</h5>
+        <form action="#" class="flex flex-col sm:flex-row gap-2">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="px-4 py-2 rounded-lg text-gray-800"
+          />
+          <button class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+            Subscribe
+          </button>
+        </form>
+        <p class="text-sm mt-2">
+          By subscribing, you agree to our <a href="#" class="hover:underline">Privacy Policy</a> and consent to receive updates.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Bottom Links -->
+    <div class="border-t border-indigo-600 mt-8 pt-4">
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <p>&copy; 2024 Philadel's Catering. All rights reserved.</p>
+          <div class="flex gap-4 mt-4 md:mt-0">
+            <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-instagram-fill"></i></a>
+            <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-linkedin-fill"></i></a>
+          </div>
+      </div>
+  
+    </div>
+   </footer>
+  
+            <script src="../public/main.js"></script>
+            <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+          </body>
+</body>
+</html>

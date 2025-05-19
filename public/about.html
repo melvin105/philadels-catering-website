@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/styles.css" />
+
+    <title> About Us - Philadel's Catering and Deco </title>
+</head>
+
+<body class="bg-gray-50">
+    <main>
+        <!---------------- Header ----------------------->
+        <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50">
+            <nav class="container flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="text-xl sm:text-3xl font-bold text-white">
+                    Philadel's Catering and Deco
+                </div>
+                <!-- Navigation Menu -->
+                <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-indigo-400 backdrop-blur-sm flex flex-col items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:flex">
+                    <ul class="flex flex-col items-center gap-8 lg:flex-row text-white font-semibold text-lg lg:text-xl">
+                        <li><a href="../public/index.html" class="nav-link hover:text-indigo-300">Home</a></li>
+                        <li><a href="../public/about.html" class="nav-link hover:text-indigo-300">About</a></li>
+                        <li><a href="../public/gallery.html" class="nav-link hover:text-indigo-300">Gallery</a></li>
+                        <li><a href="../public/contact_us.html" class="nav-link hover:text-indigo-300">Contact Us</a></li>
+                    </ul>
+                    <!-- Social Icons and Footer Links (Small Screens Only) -->
+                    <div class="flex flex-col items-center mt-8 text-white lg:hidden">
+                        <!-- Social Icons -->
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#" class="text-white"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-instagram-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-twitter-fill"></i></a>
+                            <a href="#" class="text-white"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                        <!-- Additional Links -->
+                        <div class="mt-4 text-center">
+                            <a href="../public/gallery.html" class="mr-4 hover:text-indigo-300">GALLERY</a> |
+                            <a href="../public/faq.html" class="ml-4 hover:text-indigo-300">FAQ</a>
+                        </div>
+                        <p class="mt-4">© 2023 Philadel's Catering and Deco. All rights reserved.</p>
+                        <p class="mt-2">
+                            <a href="../public/ada.html" class="text-green-300">ADA Accessibility Policy</a> ·
+                            <a href="../public/privacy.html" class="text-green-300">Privacy Policy</a>
+                        </p>
+                        <p class="mt-2">
+                            Site & Design By
+                            <a href="#" class="text-green-300 underline">Dooley Creative Co.</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="text-2xl sm:text-4xl cursor-pointer z-50 lg:hidden text-white">
+                    <i class="ri-menu-line" id="hamburger"></i>
+                </div>
+            </nav>
+        </header>
+
+
+
+<!-- Hero Section -->
+<section class="relative bg-center bg-cover h-[70vh] md:h-[80vh] lg:h-[90vh]" style="background-image: url('../assets/deco-unsplash.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Reduced opacity for a brighter effect -->
+    <div class="container mx-auto px-6 h-full flex flex-col justify-center text-white text-center">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 drop-shadow-lg">
+            Our Story
+        </h1>
+        <p class="text-xl md:text-3xl lg:text-4xl font-semibold max-w-3xl mx-auto drop-shadow-md">
+            Bringing creativity and flavor to life, one event at a time.
+        </p>
+    </div>
+</section>
+
+
+    <!-- About Us Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Image -->
+                <div>
+                    <img src="../assets/brooke-larker.jpg" alt="About Us" class="rounded-lg shadow-lg">
+                </div>
+                <!-- Text Content -->
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold text-indigo-600">Who We Are</h2>
+                    <p class="mt-6 text-gray-700 leading-relaxed">
+                        At Philadel's Catering and Deco, I believe in creating unforgettable moments.
+                         From crafting stunning cakes to decorating events with artistic flair, I am dedicated to 
+                         delivering excellence in every detail. 
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Established with a passion for culinary art and design, 
+                        I take pride in my ability to combine tradition with innovation. Whether you're celebrating a birthday, 
+                        a wedding, or any special occasion, I bring your vision to life with personalized service and exceptional attention to detail.
+                   </p>
+                    </p>
+                    <a href="../public/contact_us.html" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg shadow-md transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-16 bg-gradient-to-r from-indigo-50 to-indigo-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-indigo-600">My Mission</h2>
+            <p class="mt-6 text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
+                To create exceptional culinary and decor experiences that leave lasting impressions,
+                 while ensuring sustainability and community engagement in everything I do.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-indigo-600 text-center">About Me</h2>
+            <p class="mt-4 text-gray-700 text-center max-w-2xl mx-auto">
+                Hi, I’m Rebecca Afi Dunyo the heart and soul behind Philadel's Catering and Deco. 
+                With years of experience in culinary arts and event design, I bring creativity, elegance, 
+                and a personal touch to every event. From designing stunning decorations to crafting delicious menus, 
+                I pour my passion into every detail to make your occasion truly special.
+            </p>
+
+        </div>
+    </section>
+
+        <!-- Services Section -->
+        <section class="py-16 bg-gray-100">
+          <div class="container mx-auto">
+              <h2 class="text-4xl font-bold text-center mb-8">Our Services</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div class="bg-white p-6 shadow rounded-lg text-center">
+                      <img src="../assets/cake 1.avif" alt="Catering" class="w-full h-40 object-cover rounded">
+                      <h3 class="text-xl font-semibold mt-4">Catering</h3>
+                      <p class="mt-2 text-gray-600">Delicious and customized menus for all occasions.</p>
+                  </div>
+                  <div class="bg-white p-6 shadow rounded-lg text-center">
+                      <img src="../assets/jennifer-pallian.jpg" alt="Decorations" class="w-full h-40 object-cover rounded">
+                      <h3 class="text-xl font-semibold mt-4">Decorations</h3>
+                      <p class="mt-2 text-gray-600">Elegant and creative decor to elevate your event.</p>
+                  </div>
+                  <div class="bg-white p-6 shadow rounded-lg text-center">
+                      <img src="../assets/courtney-cook.jpg" alt="Cakes" class="w-full h-40 object-cover rounded">
+                      <h3 class="text-xl font-semibold mt-4">Cakes</h3>
+                      <p class="mt-2 text-gray-600">Exquisite cakes tailored to your taste and style.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Innovation Section -->
+      <section class="py-16">
+          <div class="container mx-auto flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mt-8 md:mt-0">
+                  <img src="../assets/courtney-cook.jpg" alt="Innovation" class="rounded-lg shadow-lg">
+              </div>
+              <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                  <h2 class="text-4xl font-bold">Innovation</h2>
+                  <p class="mt-4 text-gray-600">With a strong foundation in culinary arts and hospitality, I am committed to staying at the forefront of culinary trends and innovations.</p>
+                  <p class="mt-4 text-gray-600">Inspired by global design, travel, and diverse cultures, I constantly refine my offerings to ensure every dish and detail reflects the pinnacle of creativity and flavor.</p>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Personalization Section -->
+      <section class="py-16 bg-gray-100">
+          <div class="container mx-auto flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12">
+                  <h2 class="text-4xl font-bold">Personalization</h2>
+                  <p class="mt-4 text-gray-600">Every client and every event is unique, which is why I take the time to truly understand your vision. Whether you have a clear idea of what you want or need guidance to bring your dream to life, I work closely with you to create a one-of-a-kind experience.</p>
+                  <p class="mt-4 text-gray-600">Instead of overwhelming you with endless options, I present thoughtfully crafted, personalized selections rooted in local and regional culinary traditions, ensuring your event feels both special and authentic.</p>
+              </div>
+              <div class="md:w-1/2 mt-8 md:mt-0">
+                  <img src="../assets/courtney-cook.jpg" alt="Personalization" class="rounded-lg shadow-lg">
+              </div>
+          </div>
+      </section>
+
+            <!-- Passion Section -->
+            <section class="py-16 bg-gray-50">
+              <div class="container mx-auto px-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                      <!-- Image -->
+                      <div>
+                          <img src=" ../assets/courtney-cook.jpg" alt="Our Passion" class="rounded-lg shadow-lg">
+                      </div>
+                      <!-- Text Content -->
+                      <div>
+                          <h2 class="text-3xl md:text-5xl font-bold text-indigo-600">Passion</h2>
+                          <p class="mt-6 text-gray-700 leading-relaxed">
+                            I’m deeply committed to every detail, no matter how small.
+                             From the presentation and quality of the food to the overall guest experience, 
+                             I strive for perfection in every aspect.
+                          </p>
+                          <p class="mt-4 text-gray-700 leading-relaxed">
+                            My focus is on delivering impeccable flavors, 
+                            inventive presentations, and seamless execution. My goal is to consistently exceed 
+                            your expectations, ensuring your event is not only memorable but truly unforgettable.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+  
+
+  
+  </main>
+                
+  <!-------------------- Footer -------------------->
+        <footer class="bg-gray-700 text-white py-8">
+          <div class="container mx-auto px-4">
+            <!-- Grid Section -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+              
+              <!-- Logo -->
+              <div class="mb-4 md:mb-0">
+                <h4 class="text-xl font-semibold">Philadel's Catering</h4>
+              </div>
+              
+              <!-- Quick Links -->
+              <div>
+                <h5 class="font-bold mb-2">Quick Links</h5>
+                <ul>
+                  <li class="mb-2"><a href="#about" class="hover:underline">About Us</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Our Menu</a></li>
+                  <li class="mb-2"><a href="#contact-us" class="hover:underline">Contact Us</a></li>
+                  <li class="mb-2"><a href="#gallery" class="hover:underline">Gallery</a></li>
+                  <li><a href="#" class="hover:underline">Testimonials</a></li>
+                </ul>
+              </div>
+              
+              <!-- Follow Us -->
+              <div>
+                <h5 class="font-bold mb-2">Follow Us</h5>
+                <ul>
+                  <li class="mb-2"><a href="#" class="hover:underline">Facebook</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Instagram</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Twitter</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">LinkedIn</a></li>
+                  <li><a href="#" class="hover:underline">YouTube</a></li>
+                </ul>
+              </div>
+              
+              <!-- Stay Updated -->
+              <div>
+                <h5 class="font-bold mb-2">Stay Updated</h5>
+                <ul>
+                  <li class="mb-2"><a href="#" class="hover:underline">Newsletter</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Special Offers</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Events</a></li>
+                  <li class="mb-2"><a href="#" class="hover:underline">Catering Services</a></li>
+                  <li><a href="#" class="hover:underline">Feedback</a></li>
+                </ul>
+              </div>
+              
+            </div>
+        
+            <!-- Subscribe Section -->
+            <div class="mt-8">
+              <h5 class="font-bold mb-2">Subscribe</h5>
+              <form action="#" class="flex flex-col sm:flex-row gap-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="px-4 py-2 rounded-lg text-gray-800"
+                />
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                  Subscribe
+                </button>
+              </form>
+              <p class="text-sm mt-2">
+                By subscribing, you agree to our <a href="#" class="hover:underline">Privacy Policy</a> and consent to receive updates.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Bottom Links -->
+          <div class="border-t border-indigo-600 mt-8 pt-4">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+              <p>&copy; 2024 Philadel's Catering. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                  <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-facebook-circle-fill"></i></a>
+                  <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-instagram-fill"></i></a>
+                  <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-twitter-fill"></i></a>
+                  <a href="#" class="text-gray-500 hover:text-indigo-500 text-xl"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+        
+          </div>
+        </footer>
+        
+                  <script src="../public/main.js"></script>
+                  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+                </body>
+        </html>
