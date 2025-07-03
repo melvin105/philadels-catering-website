@@ -33,61 +33,6 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* REVIEW SLIDER */
-const carousel = document.getElementById('carousel');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    const totalSlides = 3; // Total number of slides
-    let currentIndex = 0;
-    let autoSlideInterval;
-
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-      }, 5000); // Slides every 5 seconds
-    }
-
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
-
-    prev.addEventListener('click', () => {
-      stopAutoSlide();
-      currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-      updateCarousel();
-      startAutoSlide();
-    });
-
-    next.addEventListener('click', () => {
-      stopAutoSlide();
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-      startAutoSlide();
-    });
-
-    // Start auto-sliding on page load
-    startAutoSlide();
-
-
-                  
-                        /* CONTACT US */
-
-     // JavaScript to handle form submission (example)
-     document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent default form submission
-
-      // Example: Show an alert with form data
-      alert('Message sent successfully!');
-
-      // Reset the form
-      e.target.reset();
-    });
-
 
                         // GALLERY GRID
 
@@ -101,6 +46,67 @@ function filterGallery(category) {
     }
   });
 }
-                        
+           
+
+                    // TESTIMONIAL SLIDER
+const slides = document.querySelectorAll('#testimonial-slider .slide');
+const prevBtn = document.getElementById('prev-slide');
+const nextBtn = document.getElementById('next-slide');
+const dots = document.querySelectorAll('.testimonial-dot');
+let currentSlide = 0;
+let autoSlideInterval;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        slide.style.display = i === index ? 'flex' : 'none';
+    });
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-indigo-200', i === index);
+        dot.classList.toggle('bg-indigo-100', i !== index);
+        dot.classList.toggle('border-indigo-400', i === index);
+        dot.classList.toggle('border-indigo-200', i !== index);
+    });
+    currentSlide = index;
+}
+
+function nextSlide() {
+    showSlide((currentSlide + 1) % slides.length);
+}
+
+function prevSlideFunc() {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+}
+
+prevBtn.addEventListener('click', () => {
+    prevSlideFunc();
+    resetAutoSlide();
+});
+
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoSlide();
+});
+
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        showSlide(i);
+        resetAutoSlide();
+    });
+});
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 6000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+slides.forEach((slide, i) => slide.style.display = i === 0 ? 'flex' : 'none');
+showSlide(0);
+startAutoSlide();
+
 
     
