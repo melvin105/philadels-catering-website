@@ -17,29 +17,33 @@
 
         <!-- Header -->
         <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50 
-            bg-transparent shadow-none backdrop-blur-none">
+            bg-transparent shadow-none backdrop-blur-none transition-all duration-300">
             <nav class="container flex items-center justify-between h-16 sm:h-20 mx-auto">
                 <!-- Logo (always visible on large screens) -->
                 <div class="flex items-center gap-3 lg:gap-3">
                     <img src="./assets/logo.png" alt="Philadel's Logo" class="h-12 sm:h-14 w-auto" />
-                    <span class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide drop-shadow-lg playfair">
-                        Philadels Catering & Decor
+                    <span class="text-xl sm:text-3xl font-extrabold text-white tracking-wide drop-shadow-lg playfair leading-tight">
+                        <!-- Two-line title on small screens -->
+                        <span class="inline sm:hidden">Philadels<br>Catering & Decor</span>
+                        <!-- One-line title on larger screens -->
+                        <span class="hidden sm:inline">Philadels Catering & Decor</span>
                     </span>
                 </div>
 
                 <!-- Navigation Menu -->
                 <div id="nav-menu"
                     class="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-indigo-900/95 backdrop-blur-md
-                        flex flex-col items-center justify-center duration-500 ease-in-out lg:static lg:min-h-fit lg:w-auto lg:flex-row lg:flex 
-                        lg:bg-transparent lg:backdrop-blur-none">
+                    flex flex-col items-center justify-center duration-500 ease-in-out lg:static lg:min-h-fit lg:w-auto lg:flex-row lg:flex 
+                    lg:bg-transparent lg:backdrop-blur-none">
 
                     <!-- Mobile Logo (small screens only) -->
                     <div class="mb-8 flex flex-col items-center lg:hidden">
                         <img src="./assets/logo.png" alt="Philadel's Logo" class="h-20 w-auto mb-2" />
-                        <span class="text-xl font-extrabold text-white tracking-wide playfair text-center">
-                            Philadels Catering & Decor
+                        <span class="text-xl font-extrabold text-white tracking-wide playfair text-center leading-tight">
+                            Philadels<br>Catering & Decor
                         </span>
                     </div>
+
 
                     <ul class="flex flex-col items-center gap-10 lg:flex-row text-white font-medium text-lg lg:text-white lg:drop-shadow poppins">
                         <li><a href="./index.html" class="nav-link lg:hover:text-rose-300 transition duration-300">Home</a></li>
@@ -50,14 +54,12 @@
 
                     <!-- Social Icons and Footer Links (Small Screens Only) -->
                     <div class="flex flex-col items-center mt-10 text-white lg:hidden">
-                        <!-- Social Icons -->
                         <div class="flex gap-6 text-2xl mb-4">
                             <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
                             <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
                             <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
                         </div>
-                        
-                        <!-- Additional Links -->
+
                         <p class="mt-3 text-xs poppins">
                             Site & Design By
                             <a href="#" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Dooley Creative Co.</a>
@@ -73,6 +75,7 @@
         </header>
 
 
+
         <!-- Hero Section -->
         <section style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/allen-rad.jpg');" 
                 class="bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center text-white relative overflow-hidden">
@@ -85,7 +88,7 @@
                     <p class="text-xl sm:text-2xl font-medium text-indigo-100 max-w-2xl mx-auto drop-shadow-md animate-fade-in-up delay-100">
                         Discover our exquisite cakes, delightful pastries, and elegant decorations—crafted to make every celebration truly unforgettable.
                     </p>
-                    <a href="#explore" class="mt-6 inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-200">
+                    <a href="#gallery" class="mt-6 inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-200">
                         Explore Now
                     </a>
                 </div>
@@ -217,7 +220,7 @@
                     <li><a href="./about.html" class="hover:text-pink-600 transition">About Us</a></li>
                     <li><a href="./contact_us.html" class="hover:text-pink-600 transition">Contact Us</a></li>
                     <li><a href="./gallery.html" class="hover:text-pink-600 transition">Gallery</a></li>
-                    <li><a href="./index.html" class="hover:text-pink-600 transition">Testimonials</a></li>
+                    <li><a href="./index.html#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
                 </ul>
             </div>
             <div>

@@ -16,22 +16,20 @@ navLink.forEach(link => {
         hamburger.classList.remove("ri-close-line");
     });
 });
-// Navbar visibility toggle on scroll
-const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll === 0) {
-        // At the very top of the page
-        navbar.classList.remove("hidden");
-        navbar.classList.add("absolute");
-    } else {
-        // Scrolling down or not at the top
-        navbar.classList.add("hidden");
-    }
-});
-
+        // Make header always visible while scrolling
+        // Optionally, add a background on scroll for better readability
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+            navbar.classList.add('bg-indigo-900/80', 'backdrop-blur-md', 'shadow-lg');
+            navbar.classList.remove('bg-transparent', 'shadow-none', 'backdrop-blur-none');
+            } else {
+            navbar.classList.remove('bg-indigo-900/80', 'backdrop-blur-md', 'shadow-lg');
+            navbar.classList.add('bg-transparent', 'shadow-none', 'backdrop-blur-none');
+            }
+        });
 
 
                         // GALLERY GRID
