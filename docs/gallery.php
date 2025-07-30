@@ -245,7 +245,7 @@
             <p class="mt-2">
                 All rights reserved. Thank you for supporting Philadels Catering & Decor!
             </p>
-            <p class="mt-2">Site & Design By <a href="#" class="hover:text-pink-600">Dooley Creative Co.</a></p>
+            <p class="mt-2">Site & Design By <a href="https://melvin105.github.io/Portfolio-site/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
         </div>
     </footer>
                   
