@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    transition: top 0.3s ease-in-out;  /*Adds a smooth transition when hiding/showing */
+  }
+
+  /* === General Styles === */
+#testimonial-slider .flex {
+    width: 100%;
+}
+
+#testimonial-slider .slide {
+    display: none;
+    width: 100%;
+}
+
+#testimonial-slider .slide.active {
+    display: flex;
+}
+
+#testimonial-slider img {
+    aspect-ratio: 3 / 4;
+    border-radius: 1.5rem 3rem 1.5rem 3rem;
+}
+
+/* === Keyframe Animations === */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Animation Utility Classes === */
+.animate-fade-in {
+    animation: fade-in 1s ease both;
+}
+
+.animate-slide-down {
+    animation: slide-down 1s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.animate-pop-in {
+    animation: pop-in 0.7s cubic-bezier(.4, 0, .2, 1) both;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}

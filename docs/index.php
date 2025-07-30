@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title> Home - Philadels Catering & Deco</title>
+ 
+</head>
+
+<body class="bg-gradient-to-br from-indigo-50 via-white to-pink-50 min-h-screen">
+    <main>
+
+        <!-- Header -->
+        <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50 
+            bg-transparent shadow-none backdrop-blur-none transition-all duration-300">
+            <nav class="container flex items-center justify-between h-16 sm:h-20 mx-auto">
+                <!-- Logo (always visible on large screens) -->
+                <div class="flex items-center gap-3 lg:gap-3">
+                    <img src="./assets/logo.png" alt="Philadel's Logo" class="h-12 sm:h-14 w-auto" />
+                    <span class="text-xl sm:text-3xl font-extrabold text-white tracking-wide drop-shadow-lg playfair leading-tight">
+                        <!-- Two-line title on small screens -->
+                        <span class="inline sm:hidden">Philadels<br>Catering & Decor</span>
+                        <!-- One-line title on larger screens -->
+                        <span class="hidden sm:inline">Philadels Catering & Decor</span>
+                    </span>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div id="nav-menu"
+                    class="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-indigo-900/95 backdrop-blur-md
+                    flex flex-col items-center justify-center duration-500 ease-in-out lg:static lg:min-h-fit lg:w-auto lg:flex-row lg:flex 
+                    lg:bg-transparent lg:backdrop-blur-none">
+
+                    <!-- Mobile Logo (small screens only) -->
+                    <div class="mb-8 flex flex-col items-center lg:hidden">
+                        <img src="./assets/logo.png" alt="Philadel's Logo" class="h-20 w-auto mb-2" />
+                        <span class="text-xl font-extrabold text-white tracking-wide playfair text-center leading-tight">
+                            Philadels<br>Catering & Decor
+                        </span>
+                    </div>
+
+
+                    <ul class="flex flex-col items-center gap-10 lg:flex-row text-white font-medium text-lg lg:text-white lg:drop-shadow poppins">
+                        <li><a href="./index.php" class="nav-link lg:hover:text-rose-300 transition duration-300">Home</a></li>
+                        <li><a href="./about.php" class="nav-link lg:hover:text-rose-300 transition duration-300">About</a></li>
+                        <li><a href="./gallery.php" class="nav-link lg:hover:text-rose-300 transition duration-300">Gallery</a></li>
+                        <li><a href="./contact_us.php" class="nav-link lg:hover:text-rose-300 transition duration-300">Contact Us</a></li>
+                    </ul>
+
+                    <!-- Social Icons and Footer Links (Small Screens Only) -->
+                    <div class="flex flex-col items-center mt-10 text-white lg:hidden">
+                        <div class="flex gap-6 text-2xl mb-4">
+                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
+                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+
+                        <p class="mt-3 text-xs poppins">
+                            Site & Design By
+                            <a href="#" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Dooley Creative Co.</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hamburger Icon -->
+                <div class="text-2xl sm:text-4xl cursor-pointer z-50 lg:hidden text-white drop-shadow-lg">
+                    <i class="ri-menu-line" id="hamburger"></i>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen bg-cover bg-center flex items-center bg-gradient-to-br from-indigo-50 via-white to-pink-50"
+            style="background-image: url('./assets/deva-williamson.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/70 via-rose-900/50 to-rose-700/40"></div>
+
+            <div class="relative z-10 flex flex-col justify-center h-full max-w-5xl px-6 mx-auto text-left">
+            <h1
+                class="text-4xl sm:text-6xl font-extrabold text-white leading-tight drop-shadow-lg opacity-0 animate-fade-in-up playfair">
+                Indulge in Exquisite <br /> Cakes and Pastries
+            </h1>
+
+            <p
+                class="mt-4 text-lg sm:text-xl text-rose-100 drop-shadow opacity-0 animate-fade-in-up delay-200 poppins"
+            >
+                Welcome to Philadels Catering and Deco, where every cake tells a story
+                and every pastry is a masterpiece. Discover our stunning creations
+                that are perfect for any celebration.
+            </p>
+
+            <div class="mt-8 flex gap-4">
+                <a
+                    href="./gallery.php"
+                    class="px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-rose-500 to-indigo-600 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 opacity-0 animate-fade-in-up delay-300 poppins"
+                >
+                    Explore
+                </a>
+                <a
+                    href="./contact_us.php"
+                    class="px-8 py-3 text-lg font-semibold text-indigo-800 bg-white rounded-full shadow-lg hover:bg-rose-50 hover:text-rose-600 transition-all duration-300 opacity-0 animate-fade-in-up delay-400 poppins"
+                >
+                    Contact
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gradient-to-b from-white via-pink-50 to-indigo-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-indigo-700 animate-slide-down">Exquisite Cakes Tailored for Special Occasions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition text-center border-t-4 border-pink-200 animate-fade-in delay-200">
+                        <img src="./assets/golden-cake.jpg" alt="Beautiful Cakes" class="w-full h-48 object-cover rounded-xl mb-4 shadow-md border-2 border-pink-100">
+                        <h3 class="text-xl font-bold mb-2 text-pink-700">Beautiful Cakes</h3>
+                        <p class="text-gray-600 mb-2">Experience the artistry of our stunning cakes, crafted to make every celebration unforgettable.</p>
+                        <a href="#about" class="text-pink-600 hover:underline font-semibold">Learn More</a>
+                    </div>
+                    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition text-center border-t-4 border-indigo-200 animate-fade-in delay-300">
+                        <img src="./assets/deco-unsplash.jpg" alt="Deco Artwork" class="w-full h-48 object-cover rounded-xl mb-4 shadow-md border-2 border-indigo-100">
+                        <h3 class="text-xl font-bold mb-2 text-indigo-700">Deco Artwork</h3>
+                        <p class="text-gray-600 mb-2">Transform your space with stunning designs for any event.</p>
+                        <a href="#about" class="text-indigo-600 hover:underline font-semibold">Learn More</a>
+                    </div>
+                    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition text-center border-t-4 border-pink-200 animate-fade-in delay-400">
+                        <img src="./assets/karly-gomez.jpg" alt="Customer Satisfaction" class="w-full h-48 object-cover rounded-xl mb-4 shadow-md border-2 border-pink-100">
+                        <h3 class="text-xl font-bold mb-2 text-pink-700">Customer Satisfaction</h3>
+                        <p class="text-gray-600 mb-2">Exceptional service and delicious creations to exceed expectations.</p>
+                        <a href="#about" class="text-pink-600 hover:underline font-semibold">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-pink-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6 text-pink-700 animate-slide-down">Delight in Every Occasion</h2>
+                <p class="text-lg text-center mb-10 max-w-2xl mx-auto text-gray-700 animate-fade-in delay-200">
+                    At Philadel's Catering and Deco, we specialize in custom cakes and decor that reflect your unique vision.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition animate-pop-in delay-200">
+                        <i class="fas fa-cake-candles text-5xl text-pink-500 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2 text-indigo-700">Tailored Cake Designs</h3>
+                        <p class="text-gray-600">Custom cakes for your special moments.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition animate-pop-in delay-300">
+                        <i class="fas fa-star text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2 text-indigo-700">Premium Ingredients</h3>
+                        <p class="text-gray-600">Unforgettable flavors in every bite.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition animate-pop-in delay-400">
+                        <i class="fas fa-paint-brush text-5xl text-pink-500 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2 text-indigo-700">Artistic Decor</h3>
+                        <p class="text-gray-600">Transform your event with creative decor.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="./contact_us.php" class="bg-gradient-to-r from-pink-500 to-indigo-600 text-white px-10 py-4 rounded-full hover:scale-105 hover:shadow-xl transition-all duration-300 font-semibold text-lg shadow-lg animate-pop-in delay-500">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gradient-to-b from-indigo-50 to-white border-t border-b border-indigo-100">
+            <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-indigo-700 mb-4">What Our Clients Say</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+                Discover how Philadels Catering and Deco has made celebrations unforgettable for our clients.
+            </p>
+            <div class="relative max-w-5xl mx-auto">
+                <div id="testimonial-slider" class="relative w-full overflow-hidden">
+                <!-- Slides -->
+                <!-- Slide 1 -->
+                <div class="slide active flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: flex;">
+                    <!-- Slide 1 Content -->
+                    <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
+                        <img src="./assets/auntie.jpg" alt="Mrs. Joyce Asare Kissi"
+                            class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
+                    </div>
+                    <div class="flex-1 text-left basis-2/3">
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">
+                            “In 2015, Philadels transformed our event with a professional cake branded ‘the nutritionist choice’. Absolutely outstanding service and attention to detail!”
+                        </blockquote>
+                        <div>
+                            <span class="font-semibold text-indigo-700">Mrs. Joyce Asare Kissi</span>
+                            <span class="block text-gray-400 text-sm">
+                                A registered Nutritionist & Dietitian<br>
+                                CEO, JAAK Nutrition and Diet Consult
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Slide 1 Content -->
+                </div>
+                <!-- End Slide 1 -->
+
+                <!-- Slide 2 -->
+                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
+                    <!-- Slide 2 Content -->
+                    <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
+                        <img src="./assets/uncle.jpg" alt="Richard Dunyo"
+                            class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
+                    </div>
+                    <div class="flex-1 text-left basis-2/3">
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">
+                            “Philadels made my birthday extra special with a cake designed just for me. The taste and creativity were beyond my expectations. Highly recommended!”
+                        </blockquote>
+                        <div>
+                            <span class="font-semibold text-indigo-700">Richard Dunyo</span>
+                            <span class="block text-gray-400 text-sm">Electrician</span>
+                        </div>
+                    </div>
+                    <!-- End Slide 2 Content -->
+                </div>
+                <!-- End Slide 2 -->
+
+                <!-- Slide 3 -->
+                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
+                    <!-- Slide 3 Content -->
+                    <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
+                        <img src="./assets/auntie2.jpg" alt="Emily Johnson"
+                            class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
+                    </div>
+                    <div class="flex-1 text-left basis-2/3">
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">“Philadel's Catering and Deco transformed our event with their stunning cake and decor. Our guests couldn't stop raving!”</blockquote>
+                        <div>
+                            <span class="font-semibold text-indigo-700">Emily Johnson</span>
+                            <span class="block text-gray-400 text-sm">Event Planner, ABC Events</span>
+                        </div>
+                    </div>
+                    <!-- End Slide 3 Content -->
+                </div>
+                <!-- End Slide 3 -->
+
+                <!-- Slide 4 -->
+                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
+                    <!-- Slide 4 Content -->
+                    <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
+                        <img src="./assets/headshot3.jpeg" alt="Laura Davis"
+                            class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
+                    </div>
+                    <div class="flex-1 text-left basis-2/3">
+                        <div class="flex mb-2">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">“Their attention to detail and creativity made our wedding unforgettable. The cakes were both beautiful and delicious!”</blockquote>
+                        <div>
+                            <span class="font-semibold text-indigo-700">Laura Davis</span>
+                            <span class="block text-gray-400 text-sm">Bride, Davis Wedding</span>
+                        </div>
+                    </div>
+                    <!-- End Slide 4 Content -->
+                </div>
+                <!-- End Slide 4 -->
+
+                <!-- Navigation Buttons -->
+                <button id="prev-slide" aria-label="Previous testimonial" class="absolute top-1/2 left-0 -translate-y-1/2 bg-pink-600 text-white p-3 rounded-full shadow hover:bg-pink-700 focus:outline-none transition z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-slide" aria-label="Next testimonial" class="absolute top-1/2 right-0 -translate-y-1/2 bg-pink-600 text-white p-3 rounded-full shadow hover:bg-pink-700 focus:outline-none transition z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                </div>
+                <!-- Dots -->
+                <div class="flex justify-center mt-6 space-x-3">
+                <button class="testimonial-dot w-4 h-4 rounded-full bg-indigo-200 border-2 border-indigo-400 transition" aria-label="Go to testimonial 1"></button>
+                <button class="testimonial-dot w-4 h-4 rounded-full bg-indigo-100 border-2 border-indigo-200 transition" aria-label="Go to testimonial 2"></button>
+                <button class="testimonial-dot w-4 h-4 rounded-full bg-indigo-100 border-2 border-indigo-200 transition" aria-label="Go to testimonial 3"></button>
+                <button class="testimonial-dot w-4 h-4 rounded-full bg-indigo-100 border-2 border-indigo-200 transition" aria-label="Go to testimonial 4"></button>
+                </div>
+            </div>
+            </div>
+     
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-gradient-to-br from-pink-50 via-white to-indigo-100 py-20 flex items-center border-t border-indigo-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-pink-700 mb-6 animate-slide-down">
+                    Get in Touch
+                </h2>
+                <p class="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in delay-200">
+                    Have questions or want to book our services? We're here to help!
+                </p>
+                <a href="./contact_us.php"
+                    class="inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-indigo-600 text-white rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 font-semibold text-lg animate-pop-in delay-300">
+                    Contact Us
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+     <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Philadels Catering & Decor</h3>
+                <p class="text-gray-400">Exquisite cakes and decor for every occasion.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="./index.php" class="hover:text-pink-600 transition">Home</a></li>                  
+                    <li><a href="./about.php" class="hover:text-pink-600 transition">About Us</a></li>
+                    <li><a href="./contact_us.php" class="hover:text-pink-600 transition">Contact Us</a></li>
+                    <li><a href="./gallery.php" class="hover:text-pink-600 transition">Gallery</a></li>
+                    <li><a href="#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-pink-600 transition">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-pink-600 transition">Instagram</a></li>
+                    <li><a href="#" class="hover:text-pink-600 transition">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                <div class="mb-4">
+                    <input type="email" placeholder="Your email" class="p-2 w-full border rounded-md mb-2">
+                    <button class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">Subscribe</button>
+                </div>
+                <p class="text-gray-400 text-sm">By subscribing, you agree to our <a href="#" class="hover:text-pink-600">Privacy Policy</a> and consent to receive updates.</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 text-center text-gray-400">
+            <p> 2025 Philadels Catering & Decor</p>
+            <p class="mt-2">
+                All rights reserved. Thank you for supporting Philadels Catering & Decor!
+            </p>
+            <p class="mt-2">Site & Design By <a href="#" class="hover:text-pink-600">Dooley Creative Co.</a></p>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

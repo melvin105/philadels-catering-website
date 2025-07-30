@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/styles.css" />
+
+    <title>About Us - Philadel's Catering and Deco</title>
+</head>
+
+<body class="bg-gray-50">
+    <main>
+        <header id="navbar" class="px-4 fixed w-full top-0 left-0 z-50">
+            <nav class="container flex items-center justify-between h-16 sm:h-20">
+                <div class="text-xl sm:text-3xl font-bold text-white">
+                    Philadel's Catering and Deco
+                </div>
+                <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-purple-700 backdrop-blur-sm flex flex-col items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:flex">
+                    <ul class="flex flex-col items-center gap-8 lg:flex-row text-white font-semibold text-lg lg:text-xl">
+                        <li><a href="../public/index.php" class="nav-link hover:text-indigo-300">Home</a></li>
+                        <li><a href="../public/about.php" class="nav-link hover:text-indigo-300">About</a></li>
+                        <li><a href="../public/gallery.php" class="nav-link hover:text-indigo-300">Gallery</a></li>
+                        <li><a href="../public/contact_us.php" class="nav-link hover:text-indigo-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="text-2xl sm:text-4xl cursor-pointer z-50 lg:hidden text-white">
+                    <i class="ri-menu-line" id="hamburger"></i>
+                </div>
+            </nav>
+        </header>
+
+        <section class="relative w-full h-64 sm:h-96 bg-cover bg-center" style="background-image: url('../assets/contact-us-1.jpg'); backdrop-filter: blur(5px);">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 flex items-center justify-center h-full">
+                <h1 class="text-4xl sm:text-5xl font-bold text-white text-center">Contact Us</h1>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Thank You for Reaching Out!</h2>
+                <p class="text-lg text-gray-700 mb-4">We appreciate your interest in Philadel's Catering and Deco.</p>
+                <p class="text-lg text-gray-700">Our team will get back to you as soon as possible.</p>
+                <p class="text-lg text-gray-700 mt-4">For urgent inquiries, feel free to call us at <strong>(+233) 123-456-789</strong>.</p>
+                <div class="mt-6 flex justify-center gap-4">
+                    <button onclick="history.back()" class="bg-gray-700 hover:bg-gray-900 text-white py-2 px-4 rounded-lg">Back</button>
+                    <a href="../public/index.php" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-700 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Philadel's Catering and Deco. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../public/main.js"></script>
+</body>
+</html>
