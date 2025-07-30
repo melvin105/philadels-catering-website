@@ -62,7 +62,7 @@
 
                         <p class="mt-3 text-xs poppins">
                             Site & Design By
-                            <a href="#" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Dooley Creative Co.</a>
+                            <a href="https://melvin105.github.io/Portfolio-site/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
                         </p>
                     </div>
                 </div>
