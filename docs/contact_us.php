@@ -71,7 +71,7 @@ unset($_SESSION['error_message']);
 
                         <p class="mt-3 text-xs poppins">
                             Site & Design By
-                            <a href="https://melvin105.github.io/Portfolio-site/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
+                            <a href="https://portfolio-site-pi-sable.vercel.app/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
                         </p>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ unset($_SESSION['error_message']);
                   </span>
                   <div>
                     <p class="text-gray-700 font-semibold">Email</p>
-                    <a href="mailto:dubebe2002@yahoo.com" class="text-gray-600 hover:text-purple-700 transition">dubebe2002@yahoo.com</a>
+                    <a href="mailto:philadelscatering@gmail.com" class="text-gray-600 hover:text-purple-700 transition">philadelscatering@gmail.com</a>
                   </div>
                 </div>
                 <div class="flex items-center gap-4">
@@ -145,7 +145,8 @@ unset($_SESSION['error_message']);
               <div class="flex gap-4 mt-8">
                 <a href="#" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-facebook-circle-fill"></i></a>
                 <a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-instagram-fill"></i></a>
-                <a href="#" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-linkedin-fill"></i></a>
+                <a href="http://tiktok.com/@philadelscatering" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-tiktok-fill"></i></a>
+                <a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-linkedin-fill"></i></a>
               </div>
             </div>
 
@@ -209,7 +210,8 @@ unset($_SESSION['error_message']);
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-pink-600 transition">Facebook</a></li>
                     <li><a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-pink-600 transition">Instagram</a></li>
-                    <li><a href="#" class="hover:text-pink-600 transition">LinkedIn</a></li>
+                    <li><a href="http://tiktok.com/@philadelscatering" class="hover:text-pink-600 transition">TikTok</a></li>
+                    <li><a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-pink-600 transition">LinkedIn</a></li>
                 </ul>
             </div>
             <div>
@@ -226,7 +228,7 @@ unset($_SESSION['error_message']);
             <p class="mt-2">
                 All rights reserved. Thank you for supporting Philadels Catering & Decor!
             </p>
-            <p class="mt-2">Site & Design By <a href="https://melvin105.github.io/Portfolio-site/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
+            <p class="mt-2">Site & Design By <a href="https://portfolio-site-pi-sable.vercel.app/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
         </div>
     </footer>
 

@@ -63,7 +63,7 @@
 
                         <p class="mt-3 text-xs poppins">
                             Site & Design By
-                            <a href="https://melvin105.github.io/Portfolio-site/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
+                            <a href="https://portfolio-site-pi-sable.vercel.app/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
                         </p>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div id="testimonial-slider" class="relative w-full overflow-hidden">
                 <!-- Slides -->
                 <!-- Slide 1 -->
-                <div class="slide active flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: flex;">
+                <div class="slide active flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12">
                     <!-- Slide 1 Content -->
                     <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
                         <img src="./assets/auntie.jpg" alt="Mrs. Joyce Asare Kissi"
@@ -212,7 +212,7 @@
                 <!-- End Slide 1 -->
 
                 <!-- Slide 2 -->
-                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
+                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12">
                     <!-- Slide 2 Content -->
                     <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
                         <img src="./assets/uncle.jpg" alt="Richard Dunyo"
@@ -238,36 +238,12 @@
                 </div>
                 <!-- End Slide 2 -->
 
+
                 <!-- Slide 3 -->
-                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
+                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12">
                     <!-- Slide 3 Content -->
                     <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
-                        <img src="./assets/auntie2.jpg" alt="Emily Johnson"
-                            class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
-                    </div>
-                    <div class="flex-1 text-left basis-2/3">
-                        <div class="flex mb-2">
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                            <i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">“Philadel's Catering and Deco transformed our event with their stunning cake and decor. Our guests couldn't stop raving!”</blockquote>
-                        <div>
-                            <span class="font-semibold text-indigo-700">Emily Johnson</span>
-                            <span class="block text-gray-400 text-sm">Event Planner, ABC Events</span>
-                        </div>
-                    </div>
-                    <!-- End Slide 3 Content -->
-                </div>
-                <!-- End Slide 3 -->
-
-                <!-- Slide 4 -->
-                <div class="slide flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full px-4 sm:px-12" style="display: none;">
-                    <!-- Slide 4 Content -->
-                    <div class="flex-shrink-0 flex justify-center md:justify-start basis-1/3">
-                        <img src="./assets/headshot3.jpeg" alt="Laura Davis"
+                        <img src="./assets/annabel.jpg" alt="Laura Davis"
                             class="w-48 h-64 object-cover rounded-3xl shadow-lg border-4 border-pink-200" />
                     </div>
                     <div class="flex-1 text-left basis-2/3">
@@ -280,13 +256,13 @@
                         </div>
                         <blockquote class="text-xl text-gray-700 italic mb-4 leading-relaxed">“Their attention to detail and creativity made our wedding unforgettable. The cakes were both beautiful and delicious!”</blockquote>
                         <div>
-                            <span class="font-semibold text-indigo-700">Laura Davis</span>
-                            <span class="block text-gray-400 text-sm">Bride, Davis Wedding</span>
+                            <span class="font-semibold text-indigo-700">Annabel Yawlui</span>
+                            <span class="block text-gray-400 text-sm">Student</span>
                         </div>
                     </div>
-                    <!-- End Slide 4 Content -->
+                    <!-- End Slide 3 Content -->
                 </div>
-                <!-- End Slide 4 -->
+                <!-- End Slide 3 -->
 
                 <!-- Navigation Buttons -->
                 <button id="prev-slide" aria-label="Previous testimonial" class="absolute top-1/2 left-0 -translate-y-1/2 bg-pink-600 text-white p-3 rounded-full shadow hover:bg-pink-700 focus:outline-none transition z-10">
@@ -366,7 +342,7 @@
             <p class="mt-2">
                 All rights reserved. Thank you for supporting Philadels Catering & Decor!
             </p>
-            <p class="mt-2">Site & Design By <a href="https://melvin105.github.io/Portfolio-site/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
+            <p class="mt-2">Site & Design By <a href="https://portfolio-site-pi-sable.vercel.app/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
         </div>
     </footer>
     <script src="./main.js"></script>
