@@ -20,25 +20,40 @@ const Footer = () => {
     }
 
     try {
-      const formData = new FormData();
-      formData.append('form-name', 'newsletter');
-      formData.append('email', email);
-      formData.append('bot-field', ''); // honeypot field
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setEmail('');
-        // Clear success message after 5 seconds
-        setTimeout(() => setSubmitStatus('idle'), 5000);
-      } else {
-        setSubmitStatus('error');
-      }
+      // Create a temporary form element for submission
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = '/';
+      form.style.display = 'none';
+      
+      // Add form fields
+      const formNameField = document.createElement('input');
+      formNameField.type = 'hidden';
+      formNameField.name = 'form-name';
+      formNameField.value = 'newsletter';
+      form.appendChild(formNameField);
+      
+      const emailField = document.createElement('input');
+      emailField.type = 'hidden';
+      emailField.name = 'email';
+      emailField.value = email;
+      form.appendChild(emailField);
+      
+      const honeypotField = document.createElement('input');
+      honeypotField.type = 'hidden';
+      honeypotField.name = 'bot-field';
+      honeypotField.value = '';
+      form.appendChild(honeypotField);
+      
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+      
+      setSubmitStatus('success');
+      setEmail('');
+      // Clear success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     } catch (error) {
       setSubmitStatus('error');
     } finally {

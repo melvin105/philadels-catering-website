@@ -39,28 +39,58 @@ const Contact = () => {
     }
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('form-name', 'contact');
-      formDataToSend.append('name', formData.name.trim());
-      formDataToSend.append('email', formData.email.trim());
-      formDataToSend.append('phone', formData.phone.trim());
-      formDataToSend.append('message', formData.message.trim());
-      formDataToSend.append('bot-field', ''); // honeypot field
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSend as any).toString(),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        // Clear success message after 8 seconds
-        setTimeout(() => setSubmitStatus('idle'), 8000);
-      } else {
-        setSubmitStatus('error');
-      }
+      // Create a temporary form element for submission
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = '/';
+      form.style.display = 'none';
+      
+      // Add form fields
+      const formNameField = document.createElement('input');
+      formNameField.type = 'hidden';
+      formNameField.name = 'form-name';
+      formNameField.value = 'contact';
+      form.appendChild(formNameField);
+      
+      const nameField = document.createElement('input');
+      nameField.type = 'hidden';
+      nameField.name = 'name';
+      nameField.value = formData.name.trim();
+      form.appendChild(nameField);
+      
+      const emailField = document.createElement('input');
+      emailField.type = 'hidden';
+      emailField.name = 'email';
+      emailField.value = formData.email.trim();
+      form.appendChild(emailField);
+      
+      const phoneField = document.createElement('input');
+      phoneField.type = 'hidden';
+      phoneField.name = 'phone';
+      phoneField.value = formData.phone.trim();
+      form.appendChild(phoneField);
+      
+      const messageField = document.createElement('input');
+      messageField.type = 'hidden';
+      messageField.name = 'message';
+      messageField.value = formData.message.trim();
+      form.appendChild(messageField);
+      
+      const honeypotField = document.createElement('input');
+      honeypotField.type = 'hidden';
+      honeypotField.name = 'bot-field';
+      honeypotField.value = '';
+      form.appendChild(honeypotField);
+      
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      // Clear success message after 8 seconds
+      setTimeout(() => setSubmitStatus('idle'), 8000);
     } catch (error) {
       setSubmitStatus('error');
     } finally {

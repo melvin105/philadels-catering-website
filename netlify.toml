@@ -5,10 +5,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# SPA fallback - redirect all non-file requests to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 [dev]
   command = "npm run dev"
