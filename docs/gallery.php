@@ -56,13 +56,14 @@
                     <div class="flex flex-col items-center mt-10 text-white lg:hidden">
                         <div class="flex gap-6 text-2xl mb-4">
                             <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
+                            <a href="http://tiktok.com/@philadelscatering" class="hover:text-rose-300 transition duration-300"><i class="ri-tiktok-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
                         </div>
 
                         <p class="mt-3 text-xs poppins">
                             Site & Design By
-                            <a href="https://melvin105.github.io/Portfolio-site/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
+                            <a href="https://portfolio-site-pi-sable.vercel.app/" class="text-rose-200 underline hover:text-rose-300 transition duration-300">Melvin Kwaku Yawlui</a>
                         </p>
                     </div>
                 </div>
@@ -220,7 +221,7 @@
                     <li><a href="./about.php" class="hover:text-pink-600 transition">About Us</a></li>
                     <li><a href="./contact_us.php" class="hover:text-pink-600 transition">Contact Us</a></li>
                     <li><a href="./gallery.php" class="hover:text-pink-600 transition">Gallery</a></li>
-                    <li><a href="./index.html#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
+                    <li><a href="./index.php#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
                 </ul>
             </div>
             <div>
@@ -228,7 +229,8 @@
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-pink-600 transition">Facebook</a></li>
                     <li><a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-pink-600 transition">Instagram</a></li>
-                    <li><a href="#" class="hover:text-pink-600 transition">LinkedIn</a></li>
+                    <li><a href="http://tiktok.com/@philadelscatering" class="hover:text-pink-600 transition">TikTok</a></li>
+                    <li><a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-pink-600 transition">LinkedIn</a></li>
                 </ul>
             </div>
             <div>
@@ -245,11 +247,11 @@
             <p class="mt-2">
                 All rights reserved. Thank you for supporting Philadels Catering & Decor!
             </p>
-            <p class="mt-2">Site & Design By <a href="https://melvin105.github.io/Portfolio-site/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
+            <p class="mt-2">Site & Design By <a href="https://portfolio-site-pi-sable.vercel.app/" class="hover:text-pink-600">Melvin Kwaku Yawlui</a></p>
         </div>
     </footer>
                   
            <script src="./main.js"></script>
-           <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>      
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>      
 </body>
 </html>     

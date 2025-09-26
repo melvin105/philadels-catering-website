@@ -65,8 +65,8 @@ unset($_SESSION['error_message']);
                     <div class="flex flex-col items-center mt-10 text-white lg:hidden">
                         <div class="flex gap-6 text-2xl mb-4">
                             <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
                         </div>
 
                         <p class="mt-3 text-xs poppins">
@@ -202,7 +202,7 @@ unset($_SESSION['error_message']);
                     <li><a href="./about.php" class="hover:text-pink-600 transition">About Us</a></li>
                     <li><a href="./contact_us.php" class="hover:text-pink-600 transition">Contact Us</a></li>
                     <li><a href="./gallery.php" class="hover:text-pink-600 transition">Gallery</a></li>
-                    <li><a href="./index.html#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
+                    <li><a href="./index.php#testimonials" class="hover:text-pink-600 transition">Testimonials</a></li>
                 </ul>
             </div>
             <div>
@@ -248,7 +248,7 @@ unset($_SESSION['error_message']);
 
   
             <script src="./main.js"></script>
-            <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
             <script type="text/javascript">
                 if(window.history.replaceState){
                     window.history.replaceState(null, null, window.location.href);
