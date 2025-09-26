@@ -1,72 +1,156 @@
-# Philadels Catering and Deco Website
+# Philadels Catering & Decor Website
 
-A modern, responsive website designed for **Philadel's Catering and Deco**, a business that specializes in cakes, pastries, and event decorations. This project showcases the brand's offerings, contact options, and overall digital presence.
+A modern, responsive website for Philadels Catering & Decor built with Next.js, TypeScript, and Tailwind CSS. This website showcases beautiful cakes, catering services, and event decorations.
 
-## 🧁 Project Overview
+## 🚀 Features
 
-This is a full-stack web development project with a beautiful front-end built using **HTML**, **Tailwind CSS**, and **JavaScript**, and a back-end powered by **PHP**. The project is designed to be user-friendly, mobile-responsive, and visually appealing.
-
-Key Features:
-- Homepage with an elegant brand presentation
-- Services section highlighting catering and decoration services
-- Responsive gallery showcasing cakes and decorations
-- Contact form with functional PHP backend (email handler)
-- Mobile-optimized UI with sticky navbar and animation effects
-
-## 🚀 Technologies Used
-
-- **HTML5**
-- **Tailwind CSS**
-- **JavaScript**
-- **PHP (Mail backend)**
-- **XAMPP (Local development environment)**
+- **Modern Tech Stack**: Next.js 14 with TypeScript and Tailwind CSS
+- **Responsive Design**: Mobile-first approach with beautiful animations
+- **Static Site Generation**: Optimized for performance and SEO
+- **Netlify Forms**: Built-in contact form and newsletter subscription
+- **Image Optimization**: Next.js Image component for optimal loading
+- **Accessibility**: WCAG compliant with proper ARIA labels
 
 ## 📁 Project Structure
 
-The main files are organized as follows:
-PHILADELS-CATERING-WEBSITE/
-│
-├── .vscode/ # VS Code workspace settings
-├── docs/ 
-│ ├── assets/ # Images, icons, media
-│ ├── about.php
-│ ├── config.php
-│ ├── contact_us.php # Contact form page
-│ ├── gallery.php
-│ ├── index.php # Homepage
-│ ├── main.js # JavaScript functions
-│ ├── send_email.php # PHP mail handler (works locally)
-│ ├── styles.css # Custom styles
-│ └── thank_you.php # Submission confirmation page
-│
-├── node_modules/ 
-├── vendor/ # Composer dependencies
-├── .gitignore
-├── composer.json
-├── composer.lock
-└── README.md # This file
+```
+├── components/          # React components
+│   ├── Header.tsx      # Navigation header
+│   ├── Footer.tsx      # Site footer
+│   └── Layout.tsx      # Main layout wrapper
+├── pages/              # Next.js pages
+│   ├── index.tsx       # Home page
+│   ├── about.tsx       # About page
+│   ├── gallery.tsx     # Gallery page
+│   ├── contact.tsx     # Contact page
+│   └── _app.tsx        # App configuration
+├── public/             # Static assets
+│   └── assets/         # Images and media files
+├── styles/             # Global styles
+│   └── globals.css     # Tailwind CSS and custom styles
+└── netlify.toml        # Netlify configuration
+```
 
+## 🛠️ Local Development
 
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-> **Note:** The backend uses `PHP` and should be run in a local server environment like **XAMPP**.
+2. **Run development server**:
+   ```bash
+   npm run dev
+   ```
 
-## ⚙️ Setup Instructions
+3. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-1. Clone or download the repository.
-2. Move the project folder into the `htdocs` directory of XAMPP.
-3. Start **Apache** using the XAMPP control panel.
-4. Open your browser and navigate to:
+## 🚀 Deployment to Netlify
 
-5. To test the contact form, make sure `sendmail` is configured correctly in your XAMPP `php.ini`.
+### Option 1: Deploy from Git (Recommended)
 
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
 
+2. **Connect to Netlify**:
+   - Go to [netlify.com](https://netlify.com)
+   - Click "New site from Git"
+   - Connect your GitHub repository
+   - Use these build settings:
+     - **Build command**: `npm run build`
+     - **Publish directory**: `out`
+     - **Node version**: `18`
 
-## 🧑‍💻 Author
+3. **Deploy**:
+   - Click "Deploy site"
+   - Your site will be live at a random URL
+   - You can add a custom domain later
 
-**Melvin Kwaku Yawlui**  
-Computer Engineering Student, KNUST  
-[GitHub Profile](https://github.com/melvin105)
+### Option 2: Manual Deploy
 
+1. **Build the project**:
+   ```bash
+   npm run build
+   ```
 
+2. **Upload to Netlify**:
+   - Go to [netlify.com](https://netlify.com)
+   - Drag and drop the `out` folder
+   - Your site will be deployed instantly
 
+## 📧 Contact Form Setup
 
+The contact form uses Netlify Forms and will work automatically once deployed. No additional configuration needed!
+
+### Form Fields:
+- **Name** (required)
+- **Email** (required)
+- **Phone** (optional)
+- **Message** (required)
+
+## 📬 Newsletter Subscription
+
+The newsletter subscription form is also powered by Netlify Forms and will automatically collect email addresses.
+
+## 🎨 Customization
+
+### Colors
+The website uses a custom color palette defined in `tailwind.config.js`:
+- Primary: Indigo/Purple gradients
+- Secondary: Pink/Rose accents
+- Background: Light gradients
+
+### Fonts
+- **Headings**: Playfair Display (serif)
+- **Body**: Poppins (sans-serif)
+
+### Images
+All images are stored in `public/assets/` and optimized using Next.js Image component.
+
+## 🔧 Configuration Files
+
+- `next.config.js`: Next.js configuration for static export
+- `tailwind.config.js`: Tailwind CSS customization
+- `netlify.toml`: Netlify deployment settings
+- `tsconfig.json`: TypeScript configuration
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
+
+## 🎯 SEO Features
+
+- Meta tags for each page
+- Open Graph tags
+- Structured data
+- Optimized images
+- Fast loading times
+
+## 🚀 Performance
+
+- Static Site Generation (SSG)
+- Image optimization
+- CSS purging
+- Minimal JavaScript bundle
+- CDN delivery via Netlify
+
+## 📞 Support
+
+For any questions or issues, please contact:
+- **Email**: philadelscatering@gmail.com
+- **Phone**: 024 218 7608
+
+## 📄 License
+
+© 2025 Philadels Catering & Decor. All rights reserved.
+
+---
+
+**Built with ❤️ by [Melvin Kwaku Yawlui](https://portfolio-site-pi-sable.vercel.app/)**
