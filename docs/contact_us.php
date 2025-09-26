@@ -64,7 +64,7 @@ unset($_SESSION['error_message']);
                     <!-- Social Icons and Footer Links (Small Screens Only) -->
                     <div class="flex flex-col items-center mt-10 text-white lg:hidden">
                         <div class="flex gap-6 text-2xl mb-4">
-                            <a href="#" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://www.facebook.com/Tarababane" class="hover:text-rose-300 transition duration-300"><i class="ri-facebook-fill"></i></a>
                             <a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-rose-300 transition duration-300"><i class="ri-instagram-fill"></i></a>
                             <a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-rose-300 transition duration-300"><i class="ri-linkedin-fill"></i></a>
                         </div>
@@ -143,7 +143,7 @@ unset($_SESSION['error_message']);
                 </div>
               </div>
               <div class="flex gap-4 mt-8">
-                <a href="#" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-facebook-circle-fill"></i></a>
+                <a href="https://www.facebook.com/Tarababane" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-facebook-circle-fill"></i></a>
                 <a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-instagram-fill"></i></a>
                 <a href="http://tiktok.com/@philadelscatering" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-tiktok-fill"></i></a>
                 <a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="text-purple-600 hover:text-purple-800 text-2xl"><i class="ri-linkedin-fill"></i></a>
@@ -208,7 +208,7 @@ unset($_SESSION['error_message']);
             <div>
                 <h3 class="text-xl font-bold mb-4">Follow Us</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-pink-600 transition">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/Tarababane" class="hover:text-pink-600 transition">Facebook</a></li>
                     <li><a href="https://www.instagram.com/philadelscatering/?__pwa=1#" class="hover:text-pink-600 transition">Instagram</a></li>
                     <li><a href="http://tiktok.com/@philadelscatering" class="hover:text-pink-600 transition">TikTok</a></li>
                     <li><a href="https://www.linkedin.com/in/becky-dunyo-46b853186/" class="hover:text-pink-600 transition">LinkedIn</a></li>
