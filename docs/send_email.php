@@ -14,10 +14,10 @@ require __DIR__ . '/config.php';
 session_start();
 
 // Database connection
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "philadels_catering";
+$servername = defined('DB_HOST') ? DB_HOST : "localhost";
+$username = defined('DB_USER') ? DB_USER : "root"; 
+$password = defined('DB_PASS') ? DB_PASS : ""; 
+$dbname = defined('DB_NAME') ? DB_NAME : "philadels_catering";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
