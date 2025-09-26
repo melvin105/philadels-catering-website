@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 
@@ -330,10 +331,24 @@
             </div>
             <div>
                 <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
-                <div class="mb-4">
-                    <input type="email" placeholder="Your email" class="p-2 w-full border rounded-md mb-2">
-                    <button class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">Subscribe</button>
-                </div>
+                
+                <!-- Display subscription messages -->
+                <?php if (isset($_SESSION['subscription_success'])): ?>
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-3 mb-4 rounded text-sm">
+                        <p><?php echo $_SESSION['subscription_success']; unset($_SESSION['subscription_success']); ?></p>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (isset($_SESSION['subscription_error'])): ?>
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-3 mb-4 rounded text-sm">
+                        <p><?php echo $_SESSION['subscription_error']; unset($_SESSION['subscription_error']); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" action="subscribe.php" class="mb-4">
+                    <input type="email" name="subscribe_email" placeholder="Your email" class="p-2 w-full border rounded-md mb-2 text-gray-800 bg-white" required>
+                    <button type="submit" class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">Subscribe</button>
+                </form>
                 <p class="text-gray-400 text-sm">By subscribing, you agree to our <a href="#" class="hover:text-pink-600">Privacy Policy</a> and consent to receive updates.</p>
             </div>
         </div>
