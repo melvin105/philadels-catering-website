@@ -1,6 +1,51 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const formData = new FormData();
+      formData.append('form-name', 'newsletter');
+      formData.append('email', email);
+      formData.append('bot-field', ''); // honeypot field
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setEmail('');
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -70,23 +115,44 @@ const Footer = () => {
             method="POST" 
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
+            onSubmit={handleNewsletterSubmit}
             className="mb-4"
           >
             <input type="hidden" name="form-name" value="newsletter" />
+            <div style={{ display: 'none' }}>
+              <input name="bot-field" />
+            </div>
             <input 
               type="email" 
               name="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email" 
-              className="p-2 w-full border rounded-md mb-2 text-gray-800 bg-white" 
+              className="p-2 w-full border rounded-md mb-2 text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500" 
               required 
+              disabled={isSubmitting}
             />
             <button 
               type="submit" 
-              className="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition"
+              disabled={isSubmitting}
+              className="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition disabled:opacity-50 disabled:cursor-not-allowed w-full"
             >
-              Subscribe
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
             </button>
           </form>
+          
+          {/* Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="mb-2 p-2 bg-green-600 text-white text-sm rounded">
+              ✓ Successfully subscribed! Thank you for joining us.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="mb-2 p-2 bg-red-600 text-white text-sm rounded">
+              ✗ Something went wrong. Please try again.
+            </div>
+          )}
+          
           <p className="text-gray-400 text-sm">
             By subscribing, you agree to our <a href="#" className="hover:text-pink-600">Privacy Policy</a> and consent to receive updates.
           </p>

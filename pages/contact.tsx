@@ -9,6 +9,8 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -17,10 +19,53 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form will be handled by Netlify Forms
-    // You can add additional client-side validation here if needed
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // Basic validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('form-name', 'contact');
+      formDataToSend.append('name', formData.name.trim());
+      formDataToSend.append('email', formData.email.trim());
+      formDataToSend.append('phone', formData.phone.trim());
+      formDataToSend.append('message', formData.message.trim());
+      formDataToSend.append('bot-field', ''); // honeypot field
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSend as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        // Clear success message after 8 seconds
+        setTimeout(() => setSubmitStatus('idle'), 8000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,6 +150,10 @@ const Contact = () => {
               className="space-y-6"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <div style={{ display: 'none' }}>
+                <input name="bot-field" />
+              </div>
+              
               <input 
                 type="text" 
                 name="name" 
@@ -113,6 +162,7 @@ const Contact = () => {
                 className="w-full h-12 text-gray-700 placeholder-gray-400 shadow-sm bg-gray-50 text-lg font-normal rounded-full border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 pl-5 transition" 
                 placeholder="Name" 
                 required 
+                disabled={isSubmitting}
               />
               <input 
                 type="email" 
@@ -122,6 +172,7 @@ const Contact = () => {
                 className="w-full h-12 text-gray-700 placeholder-gray-400 shadow-sm bg-gray-50 text-lg font-normal rounded-full border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 pl-5 transition" 
                 placeholder="Email" 
                 required 
+                disabled={isSubmitting}
               />
               <input 
                 type="text" 
@@ -130,6 +181,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="w-full h-12 text-gray-700 placeholder-gray-400 shadow-sm bg-gray-50 text-lg font-normal rounded-full border border-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 pl-5 transition" 
                 placeholder="Phone" 
+                disabled={isSubmitting}
               />
               <textarea 
                 name="message" 
@@ -139,12 +191,47 @@ const Contact = () => {
                 className="w-full border border-purple-200 rounded-2xl px-5 py-3 text-gray-700 text-lg font-normal leading-6 focus:ring-2 focus:ring-purple-400 bg-gray-50 transition" 
                 rows={5} 
                 required
+                disabled={isSubmitting}
               ></textarea>
+              
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                  <div className="flex items-center">
+                    <i className="ri-check-line text-xl mr-2"></i>
+                    <div>
+                      <strong>Message sent successfully!</strong>
+                      <p className="text-sm mt-1">Thank you for contacting us. We'll get back to you soon!</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                  <div className="flex items-center">
+                    <i className="ri-error-warning-line text-xl mr-2"></i>
+                    <div>
+                      <strong>Something went wrong!</strong>
+                      <p className="text-sm mt-1">Please try again or contact us directly.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-purple-600 to-indigo-500 text-white py-3 rounded-full text-lg font-semibold shadow-md hover:from-purple-700 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-500 text-white py-3 rounded-full text-lg font-semibold shadow-md hover:from-purple-700 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-purple-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <i className="ri-send-plane-2-fill mr-2"></i>Send Message
+                {isSubmitting ? (
+                  <>
+                    <i className="ri-loader-4-line mr-2 animate-spin"></i>Sending Message...
+                  </>
+                ) : (
+                  <>
+                    <i className="ri-send-plane-2-fill mr-2"></i>Send Message
+                  </>
+                )}
               </button>
             </form>
             <div className="mt-6 text-center text-gray-400 text-sm">
